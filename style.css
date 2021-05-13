@@ -1,0 +1,84 @@
+body {
+  font-family: "Dancing Script", cursive;
+  color: rgb(232, 159, 247);
+  width: 100%;
+  min-height: 100vh;
+  background: url(https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_960_720.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body.night{
+  color: rgb(184, 164, 164);
+  background-image: url(https://cdn.pixabay.com/photo/2015/04/23/21/59/hot-air-balloon-736879_960_720.jpg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+  position: relative;
+  /* display: block; */
+}
+
+.label-container{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+label{
+  position: absolute;
+  width: 45px;
+  height: 22px;
+  right: 20px;
+  top: 20px;
+  border: 2px solid;
+  border-radius: 20px;
+}
+label::before{
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  left: 1px;
+  /* top: -1px; */
+  border-radius: 50%;
+  cursor: pointer;
+  background: #000;
+  transition: 0.4s;
+}
+label.active::before{
+  left: 22px;
+  background-color: #fff;
+}
+
+
+.heading {
+  /* top: 50px; */
+  font-size: 10vw;
+}
+
+.big-text {
+  font-size: 3vw;
+  font-weight: bolder;
+  text-align: center;
+  /* margin-top: 5vw; */
+  /* margin-left: 1vw; */
+}
+
+.remaining {
+  font-size: 9vw;
+  font-weight: 900;
+}
+
+.countdown-container {
+  display: flex;
+}
+
+.counter {
+  margin: 10vw 6vw;
+}
